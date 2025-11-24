@@ -6,5 +6,10 @@ def infinite_chai():
 
 chai = infinite_chai()
 
-for _ in range(5):
-    print(next(chai))
+print(next(chai))
+print(next(chai))
+chai.close()
+print(next(chai))
+
+# for _ in range(5):
+    # print(next(chai))
