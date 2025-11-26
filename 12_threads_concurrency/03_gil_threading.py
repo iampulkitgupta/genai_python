@@ -11,6 +11,9 @@ def brew_chai():
 thread1 =threading.Thread(target=brew_chai, name="Barista-1")
 thread2 = threading.Thread(target=brew_chai, name="Barista-2")
 
+print(thread1)
+print(thread2)
+
 start = time.time()
 thread1.start()
 thread2.start()

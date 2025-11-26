@@ -14,6 +14,9 @@ if __name__ == "__main__":
     p1 = Process(target=crunch_number)
     p2= Process(target=crunch_number)
 
+    print(p1)
+    print(p2)
+
     p1.start()
     p2.start()
     p1.join()
