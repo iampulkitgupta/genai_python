@@ -11,6 +11,18 @@ class Comment(BaseModel):
 
 Comment.model_rebuild()
 
-comment = Comment(id=1, text="First comment", author="John Doe", created_at=datetime.now(), comment=[Comment(id=2, text="Second comment", author="John Doe", created_at=datetime.now(), comment=None)])
+comment = Comment(
+    id=1, 
+    text="First comment", 
+    author="John Doe", 
+    created_at=datetime.now(), 
+    comment=[
+        Comment(
+            id=2, 
+            text="Second comment", 
+            author="John Doe", 
+            created_at=datetime.now(), 
+            comment=None)
+        ])
 
 print(comment)
