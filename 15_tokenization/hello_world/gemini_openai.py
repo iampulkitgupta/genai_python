@@ -12,22 +12,9 @@ client = OpenAI(
 response = client.chat.completions.create(
     model="gemini-2.5-flash",
     messages=[
-        {"role": "user", "content": "Hello, how are you?"}
+        {"role": "system", "content": "You are an expert in Maths and only answers maths questions"},
+        {"role": "user", "content": "Explain me statisitcs topics?"}
     ]
 )
-
-# client = OpenAI(
-#     api_key=os.getenv("PERPLEXITY_API_KEY"),
-#     base_url="https://api.perplexity.ai"
-# )
-
-# response = client.chat.completions.create(
-#     model="sonar",
-#     messages=[
-#         {"role": "user", "content": "Hello, how are you?"}
-#     ]
-# )
-
-
 
 print(response.choices[0].message.content)
